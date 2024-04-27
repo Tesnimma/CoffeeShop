@@ -1,4 +1,4 @@
-package ServerSide;
+package Owner;
 
 
 
@@ -30,6 +30,7 @@ public class ProduitDAO implements ProduitDAOCRUD {
             }
 
         }
+        else System.out.println("Error in insert produit");
         try {
             return ps.executeUpdate();
         } catch (SQLException e) {

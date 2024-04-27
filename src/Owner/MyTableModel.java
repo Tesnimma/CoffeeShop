@@ -1,4 +1,4 @@
-package ServerSide;
+package Owner;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
@@ -12,6 +12,8 @@ public class MyTableModel extends AbstractTableModel {
     ResultSetMetaData rsmd;
     ProduitDAO dao;
     MyTableModel(ResultSet rs, ProduitDAO dao){
+        if(rs == null) return;
+        if(dao == null) System.out.println("dao is null");
         this.dao = dao;
         try {
             rsmd = rs.getMetaData();
@@ -34,6 +36,7 @@ public class MyTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
+        if(rsmd == null) return 0;
         try {
             return rsmd.getColumnCount();
         } catch (SQLException e) {

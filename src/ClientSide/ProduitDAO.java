@@ -1,7 +1,7 @@
 package ClientSide;
 
-import ServerSide.CategoryInfos;
-import ServerSide.Item;
+import Owner.CategoryInfos;
+import Owner.Item;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

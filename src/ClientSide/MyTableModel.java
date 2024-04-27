@@ -1,6 +1,6 @@
 package ClientSide;
 
-import ServerSide.ProduitDAO;
+import Owner.ProduitDAO;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;

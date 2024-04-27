@@ -1,8 +1,4 @@
-package ServerSide;
-
-import ServerSide.Config;
-import ServerSide.MyTableModel;
-import ServerSide.ProduitDAO;
+package Owner;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,10 +10,10 @@ import java.sql.ResultSet;
 
 public class GestionProduits extends JFrame {
     JTable jtProd;
-    ServerSide.MyTableModel model;
+    Owner.MyTableModel model;
     ProduitDAO dao;
     GestionProduits() {
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ServerSide/coffee background.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Owner/coffee background.png"));
         Image i2 = i1.getImage().getScaledInstance(1000,500,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);

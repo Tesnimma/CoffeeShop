@@ -1,5 +1,5 @@
 package ClientSide;
-import ServerSide.Item;
+import Owner.Item;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +8,10 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class MenuPanel extends JFrame {
-    CoffeeShopMenu shopMenu;
-    public MenuPanel(CoffeeShopMenu coffe,String category, ArrayList<Item> items) {
+    ReceiptPanel shopMenu;
+    public MenuPanel(ReceiptPanel receiptPanel,String category, ArrayList<Item> items) {
        setTitle(category);
-        shopMenu = coffe;
+        shopMenu = receiptPanel;
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
@@ -30,7 +30,8 @@ public class MenuPanel extends JFrame {
         getContentPane().add(CateGPanel,BorderLayout.CENTER);
         setSize(1000, 500);
     }
-    private void addButton(JPanel panel, String name, String price,int id) {
+    private void addButton(JPanel panel, String name, String price,int id)
+    {
         JButton button = new JButton(name + " - dt" + price);
         button.setPreferredSize(new Dimension(150, 100)); // I want to change this button size aaaa
         button.addActionListener(new ActionListener() {

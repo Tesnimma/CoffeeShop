@@ -1,4 +1,4 @@
-package ServerSide;
+package Owner;
 
 public class Item {
     public  String name;

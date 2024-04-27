@@ -1,4 +1,4 @@
-package ServerSide;
+package Owner;
 
 public class Config {
     public static final String USERNAME = "root";
