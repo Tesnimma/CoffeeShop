@@ -24,6 +24,8 @@ public class TablesSelection extends JPanel {
         }
         for (int i = 0; i < tablesNumber; i++) {
             JButton b = new JButton("Table " + (i+1));
+            b.setBackground(new Color(88,57,39));
+            b.setForeground(Color.white);
             int k = i;
             b.addActionListener(new ActionListener() {
                 @Override

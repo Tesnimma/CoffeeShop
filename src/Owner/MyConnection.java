@@ -5,7 +5,7 @@ import java.sql.*;
 public class MyConnection {
     public static Connection getConnection(String url, String username, String password){
         //chargement Driver
-        String nomDriver = "com.mysql.jdbc.Driver";
+        String nomDriver = "com.mysql.cj.jdbc.Driver";
         try {
             Class.forName(nomDriver);
             System.out.println("Driver chargé");

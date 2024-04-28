@@ -1,7 +1,16 @@
 package Owner;
 
+import java.io.IOException;
+import java.net.Socket;
+
 public class Main {
+
     public static void main(String[] args) {
-        GestionProduits gp = new GestionProduits();
+        ProduitDAO dao = new ProduitDAO(Config.URL, Config.USERNAME, Config.PASSWORD);
+        var gp =new  GestionProduits(dao);
+        gp.setVisible(false);
+        LoginPanel loginPanel = new LoginPanel(dao,gp);
+
     }
+
 }

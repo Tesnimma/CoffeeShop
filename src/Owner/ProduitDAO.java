@@ -96,6 +96,20 @@ public class ProduitDAO implements ProduitDAOCRUD {
             return null;
         }
     }
+    ResultSet GetLoginInfos(String req, String email, String password){
+        PreparedStatement st2 = null;
+        ResultSet rs = null;
+        try {
+            st2 = con.prepareStatement(req);
+            st2.setString(1,email);
+            st2.setString(2,password);
+            rs = st2.executeQuery();
+            return rs;
+        } catch (SQLException e) {
+            System.out.println("erreur" + e.getMessage());
+            return null;
+        }
+    }
     public HashMap<String,CategoryInfos> getCategories()
     {
         HashMap<String,CategoryInfos> categoryInfos = new HashMap<>();

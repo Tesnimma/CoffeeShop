@@ -35,12 +35,11 @@ public class CoffeeShopMenu extends JFrame {
         AddSection(dao.getCategories(), contentPane);
         contentPane.add(receiptPanel, BorderLayout.EAST);
         // Checkout button
-        JButton checkoutButton = new JButton("Checkout");
+        JButton checkoutButton = new JButton("Send feedback");
         checkoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implement checkout logic here
-                JOptionPane.showMessageDialog(null, "Implement checkout logic here!");
+                new FeedbackPanel();
             }
         });
         buttonsPanel.add(checkoutButton);
