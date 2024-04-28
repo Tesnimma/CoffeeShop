@@ -13,6 +13,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return name + ": "+price+" dt";
+        return name + ": " + price + " dt";
     }
 }

@@ -9,7 +9,7 @@ public class Main {
         ProduitDAO dao = new ProduitDAO(Config.URL, Config.USERNAME, Config.PASSWORD);
         var gp =new  GestionProduits(dao);
         gp.setVisible(false);
-        LoginPanel loginPanel = new LoginPanel(dao,gp);
+        LoginPanell loginPanel = new LoginPanell(null,dao,gp);
 
     }
 

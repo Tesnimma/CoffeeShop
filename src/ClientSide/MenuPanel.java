@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class MenuPanel extends JFrame {
     ReceiptPanel shopMenu;
     public MenuPanel(ReceiptPanel receiptPanel,String category, ArrayList<Item> items) {
-       setTitle(category);
+        setTitle(category);
         shopMenu = receiptPanel;
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         pack();
@@ -22,22 +22,19 @@ public class MenuPanel extends JFrame {
         JPanel headerPanel = new JPanel();
         headerPanel.add(CateLabel);
 
-        for (var i:items)
-        {
+        for (var i:items) {
             addButton(CateGPanel, i.name,i.price+"",i.ID);
         }
         getContentPane().add(headerPanel,BorderLayout.NORTH);
         getContentPane().add(CateGPanel,BorderLayout.CENTER);
-        setSize(1000, 500);
+        setSize(700, 300);
     }
-    private void addButton(JPanel panel, String name, String price,int id)
-    {
-        JButton button = new JButton(name + " - dt" + price);
-        button.setPreferredSize(new Dimension(150, 100)); // I want to change this button size aaaa
+    private void addButton(JPanel panel, String name, String price,int id) {
+        JButton button = new JButton(name + " "+ price+ " dt");
+        button.setPreferredSize(new Dimension(150, 100));
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implement button click logic here
                 JOptionPane.showMessageDialog(null, "You ordered: " + name);
                 shopMenu.addToReceipt(name,Double.parseDouble(price),id);
             }
